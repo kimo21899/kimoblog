@@ -7,7 +7,6 @@ spring:
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://localhost:31433;databaseName=Blogs;encrypt=true;trustServerCertificate=true
-    #url: jdbc:sqlserver://148.66.3.146:32384;databaseName=spring_sql;encrypt=true;trustServerCertificate=true
     username: blog@user
     password: aa1248##
 
