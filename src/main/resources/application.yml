@@ -4,4 +4,29 @@ spring:
     suffix : .html
     cache : false
 
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:31433;databaseName=Blogs;encrypt=true;trustServerCertificate=true
+    #url: jdbc:sqlserver://148.66.3.146:32384;databaseName=spring_sql;encrypt=true;trustServerCertificate=true
+    username: blog@user
+    password: aa1248##
 
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        ddl-auto: create
+    generate-ddl: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+# 로그 레벨 설정
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace # 실제 들어가는 파라미터값 찍어주는 설정
